@@ -117,7 +117,7 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
   Prediction(delta_t);
 
 /*******************************************************************************
-*                                 Update                                      *
+*                                 Update                                       *
 * Note : Can use use_radar_ or use_laser_ to switch on/off  radar or laser     *  
 *        measurements                                                          *
 *******************************************************************************/
@@ -270,7 +270,7 @@ void UKF::UpdateLidar(MeasurementPackage meas_package) {
   S = S + R_lidar_;
 
 /*******************************************************************************
-*                               1. Update State                                *
+*                               2. Update State                                *
 *******************************************************************************/
   // Incoming radar measurement
   VectorXd z = meas_package.raw_measurements_;
